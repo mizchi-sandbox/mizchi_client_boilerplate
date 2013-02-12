@@ -1,4 +1,4 @@
-# mizchi's JavaScript Project Boiler Plate
+# Mizchi's JavaScript Boilerplate
 
 - coffee-script
 - grunt
@@ -6,8 +6,8 @@
 
 ## HOW TO USE
 
-`
+```bash
 $ bower install
 $ npm install
 $ grunt run
-`
+```
