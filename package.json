@@ -1,0 +1,14 @@
+{
+  "name": "actrogue",
+  "version": "0.0.0",
+  "scripts": {
+    "test": ""
+  },
+  "devDepencies": {
+    "grunt": "*",
+    "grunt-coffee": "*"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD"
+}
