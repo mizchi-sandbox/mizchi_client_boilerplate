@@ -1,4 +1,4 @@
-# Mizchi's JavaScript Boilerplate
+# Mizchi's Client JavaScript Project Boilerplate
 
 - coffee-script
 - grunt
