@@ -1,5 +1,5 @@
 module.exports = function( grunt ) {
-  grunt.loadNpmTasks('grunt-coffee');
+  grunt.loadNpmTasks('grunt-typescript');
 
   grunt.initConfig({
     coffee: {
@@ -13,6 +13,19 @@ module.exports = function( grunt ) {
       }
     },
 
+    typescript: {
+      base: {
+        src: ['src/**/*.ts'],
+        dest: 'dist/all.js',
+        options: {
+          module: 'amd', //or commonjs
+          target: 'es5',
+          base_path: 'src'
+        }
+      }
+    },
+
+
     concat: {
       vendor: {
         src: [
@@ -20,18 +33,6 @@ module.exports = function( grunt ) {
           "components/jquery/jquery.min.js"
         ],
         dest: "dist/vendor.js"
-      },
-
-      app: {
-        src: [
-          "lib/util/*.js",
-          "lib/initialize.js",
-          "lib/**/*.js"
-        ],
-        dest: "dist/all.js",
-        options: {
-          bare: false
-        }
       }
     },
 
@@ -40,10 +41,10 @@ module.exports = function( grunt ) {
     },
 
     watch: {
-      files: "src/**/*.coffee",
-      tasks: ["coffee", "concat"]
-    },
+      files: "src/**/*.ts",
+      tasks: ["typescript"]
+    }
   });
 
-  grunt.registerTask("run", "coffee concat server watch");
+  grunt.registerTask("run", "typescript concat server watch");
 };

@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "grunt": "*",
-    "grunt-coffee": "*"
+    "grunt-typescript": "*"
   },
   "repository": "",
   "author": "",
